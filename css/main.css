@@ -1,0 +1,90 @@
+/* We typically use one CSS file, named main.css to control all of our pages */
+
+/* this is a class we use to hide headings in our design */
+.hidden {
+    display: none;
+}
+
+
+
+#container{
+    margin: 20px auto;
+    width: 428px;
+    border: solid 1px grey;
+    border-radius: 20px;
+    background-color: rgb(240, 117, 117);
+}
+
+#main-content {
+    display: grid;
+    grid-template-columns: repeat(4,85px);
+    grid-column-gap: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+article{
+    grid-column: 1/-1;
+}
+
+body {
+    display: flex;
+    font-family: 'raleway',Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 3px;
+
+}
+
+p{
+    line-height: 45px;
+    color: white;
+    margin-top: 40px;
+}
+
+img{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+
+h2{
+    position: relative;
+    font-family: 'GFS didot',Arial, Helvetica, sans-serif;
+    font-size: 56px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    background-color: rgba(206, 206, 206, 0.797);
+    color: white;
+    padding: 15px;
+    box-shadow: 5px 5px 30px rgb(25, 25, 26);
+}
+
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    color: grey;
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid grey;
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate{
+    0%,10%,100%
+    {
+    width: 0;
+    }
+    70%,90%
+    {
+    width: 80%;
+    }
+}
+
+
+h2 span{
+    color: red;
+}
